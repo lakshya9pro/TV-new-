@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TV Launcher</string>
+    <string name="search_hint">Search for apps and games</string>
+    <string name="loading">Loading…</string>
+    <string name="load_error">Couldn\'t load home_data.json — check assets folder.</string>
+</resources>

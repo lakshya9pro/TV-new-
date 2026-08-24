@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="28dp">
+
+    <TextView
+        android:id="@+id/rowTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/text_primary"
+        android:textSize="20sp"
+        android:visibility="gone"
+        tools:text="App categories" />
+
+    <!-- Search bar row content lives here when row type == "search" -->
+    <FrameLayout
+        android:id="@+id/searchBarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/search_bar_bg"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:text="🔍"
+                android:textColor="@color/text_secondary"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/searchHintText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_secondary"
+                android:textSize="16sp"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                tools:text="Search for apps and games" />
+            <!-- namespace declared once on root LinearLayout above -->
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Horizontal item list, used for icons / chips / cards row types -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rowItemsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        tools:listitem="@layout/item_media_card" />
+
+</LinearLayout>

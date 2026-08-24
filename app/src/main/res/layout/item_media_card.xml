@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginEnd="20dp">
+
+    <FrameLayout
+        android:layout_width="160dp"
+        android:layout_height="240dp">
+
+        <ImageView
+            android:id="@+id/cardImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_bg"
+            android:scaleType="centerCrop"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:clickable="true"
+            android:foreground="@drawable/focus_border"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/cardInitial"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_bg"
+            android:gravity="center"
+            android:textColor="@color/text_primary"
+            android:textSize="28sp"
+            android:fontFamily="sans-serif-medium"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/cardBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_margin="8dp"
+            android:background="@color/badge_free"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textColor="@color/text_primary"
+            android:textSize="11sp"
+            android:fontFamily="sans-serif-medium"
+            android:visibility="gone"
+            tools:text="HD" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/cardLabel"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        tools:text="Movie Title" />
+
+</LinearLayout>

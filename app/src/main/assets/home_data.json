@@ -1,0 +1,928 @@
+{
+  "searchHint": "Search movies and TV shows...",
+  "rows": [
+    {
+      "id": "top_icons",
+      "title": "Popular Live TV Channels",
+      "type": "icons",
+      "items": [
+        {
+          "id": "m3u_0",
+          "label": "Zee Dil Se",
+          "iconUrl": "https://d2mxb63djushzm.cloudfront.net/images/Zee_Dil_Se.png",
+          "badge": "Entertainment",
+          "placeholderColor": "#1E3A52"
+        },
+        {
+          "id": "m3u_1",
+          "label": "Zee Comedy Nation",
+          "iconUrl": "https://d3bd0tgyk368z1.cloudfront.net/zeelg/LG%20logo%20artwork/400x200/zcomedynation.png",
+          "badge": "Comedy",
+          "placeholderColor": "#1E3A52"
+        },
+        {
+          "id": "m3u_2",
+          "label": "Zee Horror Nights",
+          "iconUrl": "https://d3bd0tgyk368z1.cloudfront.net/zeelg/LG%20logo%20artwork/400x200/zhornights.png",
+          "badge": "Horror",
+          "placeholderColor": "#1E3A52"
+        },
+        {
+          "id": "m3u_3",
+          "label": "Atrangii",
+          "iconUrl": "https://d3s2p39m306u7r.cloudfront.net/atrangii/LG/Atrangii_FullandFinal.png",
+          "badge": "Entertainment",
+          "placeholderColor": "#1E3A52"
+        },
+        {
+          "id": "m3u_4",
+          "label": "Lallantop",
+          "iconUrl": "https://d3s2p39m306u7r.cloudfront.net/tvtn/Lg-images/LT%20400x200.png",
+          "badge": "News",
+          "placeholderColor": "#1E3A52"
+        },
+        {
+          "id": "m3u_5",
+          "label": "COMEDYTADKA",
+          "iconUrl": "https://daeol6gzwg16.cloudfront.net/lg/comedytadka/logo/Comedytadka-400x200.png",
+          "badge": "Comedy",
+          "placeholderColor": "#1E3A52"
+        },
+        {
+          "id": "m3u_6",
+          "label": "IndiaTVAapkiadalat",
+          "iconUrl": "https://dvvlqr1rtlak3.cloudfront.net/IndiaTV/AKA/AKAlogo200x400.png",
+          "badge": "Entertainment",
+          "placeholderColor": "#1E3A52"
+        },
+        {
+          "id": "m3u_7",
+          "label": "E24",
+          "iconUrl": "https://dvvlqr1rtlak3.cloudfront.net/BAGConvergence/E24/E24-Logo.jpg",
+          "badge": "Entertainment",
+          "placeholderColor": "#1E3A52"
+        },
+        {
+          "id": "m3u_8",
+          "label": "bollywood-masala-tv",
+          "iconUrl": "https://daeol6gzwg16.cloudfront.net/lg/bollywood-masala-tv-epg/logo/Bollywood Masala Tv_400x200.png",
+          "badge": "Movies",
+          "placeholderColor": "#1E3A52"
+        },
+        {
+          "id": "m3u_9",
+          "label": "Pitaara comedy",
+          "iconUrl": "https://daeol6gzwg16.cloudfront.net/lg/pitaara-comedy/logo/pitaara comedy_400x200.png",
+          "badge": "Comedy",
+          "placeholderColor": "#1E3A52"
+        },
+        {
+          "id": "m3u_10",
+          "label": "Telugu One",
+          "iconUrl": "https://dvvlqr1rtlak3.cloudfront.net/TeluguOne/teluguone_logo_resized_400x200.png",
+          "badge": "Entertainment",
+          "placeholderColor": "#1E3A52"
+        },
+        {
+          "id": "m3u_11",
+          "label": "JUSTFORLAUGH",
+          "iconUrl": "https://daeol6gzwg16.cloudfront.net/lg/justforlaughs/logo/Justforlaugh-400x200.png",
+          "badge": "Comedy",
+          "placeholderColor": "#1E3A52"
+        },
+        {
+          "id": "m3u_12",
+          "label": "DOCUVISION",
+          "iconUrl": "https://daeol6gzwg16.cloudfront.net/lg/docuvision/logo/Docuvision-400x200.png",
+          "badge": "Documentary",
+          "placeholderColor": "#1E3A52"
+        },
+        {
+          "id": "m3u_13",
+          "label": "OUTDOOR TV",
+          "iconUrl": "https://dvvlqr1rtlak3.cloudfront.net/Outdoor/outdoor_logo_resized_400x200.png",
+          "badge": "Lifestyle",
+          "placeholderColor": "#1E3A52"
+        },
+        {
+          "id": "m3u_14",
+          "label": "INFAST",
+          "iconUrl": "https://dvvlqr1rtlak3.cloudfront.net/INFAST/infast_logo_resized_white_400x200.png",
+          "badge": "Lifestyle",
+          "placeholderColor": "#1E3A52"
+        },
+        {
+          "id": "m3u_15",
+          "label": "INWONDER",
+          "iconUrl": "https://dvvlqr1rtlak3.cloudfront.net/INWONDER/InWonder_resized_400x200.png",
+          "badge": "Documentary",
+          "placeholderColor": "#1E3A52"
+        },
+        {
+          "id": "m3u_16",
+          "label": "Smart Healthy Green Living",
+          "iconUrl": "https://dvvlqr1rtlak3.cloudfront.net/SHGL/shgl_logo_resized_400x200.png",
+          "badge": "Lifestyle",
+          "placeholderColor": "#1E3A52"
+        },
+        {
+          "id": "m3u_17",
+          "label": "Space Serie",
+          "iconUrl": "https://daeol6gzwg16.cloudfront.net/lg/spaceseries/logo/Spaceseries-400x200.png",
+          "badge": "Documentary",
+          "placeholderColor": "#1E3A52"
+        },
+        {
+          "id": "m3u_18",
+          "label": "AUTOMOTIONS",
+          "iconUrl": "https://daeol6gzwg16.cloudfront.net/lg/automotions/logo/Automotions-400x200.png",
+          "badge": "Documentary",
+          "placeholderColor": "#1E3A52"
+        },
+        {
+          "id": "m3u_19",
+          "label": "Zee South Flix",
+          "iconUrl": "https://d3bd0tgyk368z1.cloudfront.net/zeelg/LG%20logo%20artwork/400x200/zsouthflix.png",
+          "badge": "Movies",
+          "placeholderColor": "#1E3A52"
+        }
+      ]
+    },
+    {
+      "id": "search",
+      "title": null,
+      "type": "search",
+      "items": []
+    },
+    {
+      "id": "hero",
+      "title": "Featured Movies & Series",
+      "type": "cards",
+      "items": [
+        {
+          "id": "78191:tv",
+          "label": "YOU",
+          "iconUrl": "https://m.media-amazon.com/images/M/MV5BMjM0MDA2NDEzNF5BMl5BanBnXkFtZTgwODYzNjg4NTM@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+          "badge": "2K",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1405:tv",
+          "label": "Dexter",
+          "iconUrl": "https://m.media-amazon.com/images/M/MV5BNTE5ZGI2N2UtYmFiMi00ZGIxLWI1ZTMtYWJkZDYxNDZiOTQwXkEyXkFqcGc@._V1_FMjpg_UY3857_.jpg",
+          "badge": "4K",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "5920:tv",
+          "label": "The Mentalist",
+          "iconUrl": "https://m.media-amazon.com/images/M/MV5BODI2YWZhOGEtY2I1Yy00ZWE5LTllOTctMTA1MTI0YWEwMzFlXkEyXkFqcGc@._V1_.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        }
+      ]
+    },
+    {
+      "id": "trending",
+      "title": "Trending Movies",
+      "type": "cards",
+      "items": [
+        {
+          "id": "1628448:movie",
+          "label": "Maa Behen",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/rfooTavEjaWh6krAcPpHp1CPj7E.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "784963:movie",
+          "label": "Tuck Jagadish",
+          "iconUrl": "https://image.tmdb.org/t/p/w400/dwRfi1cV9oKjVEll12DJqjLWyOD.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1241674:movie",
+          "label": "The Last Breath",
+          "iconUrl": "https://image.tmdb.org/t/p/w400/aC892vhMsNwcIUX5UfrsTSy9IL9.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1720282:movie",
+          "label": "WWE Night of Champions",
+          "iconUrl": "https://image.tmdb.org/t/p/w400/jPWp1JcSLLcnhjOTFU3iUeURxph.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1169516:movie",
+          "label": "Welcome to the Jungle",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/1JlfUuvvX5xLP2LIDah4JhWUtTx.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1247165:movie",
+          "label": "Raja Shivaji",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/9e2Wc6sbeU1YdBWLJIDyMcEWrN2.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1515729:movie",
+          "label": "Blast",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/ho824aZtnBzE6FuJRn2znQCq4qQ.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1020047:movie",
+          "label": "In the Hand of Dante",
+          "iconUrl": "https://image.tmdb.org/t/p/w400/nPPIufTBnzEg0d7NoR5RLL1oPra.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "83533:movie",
+          "label": "Avatar Fire and Ash",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/gDVgC9jd917NdAcqBdRRDUYi4Tq.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1507097:movie",
+          "label": "Sattendru Maarudhu Vaanilai",
+          "iconUrl": "https://image.tmdb.org/t/p/w400/aHwiypD3b2Ey9CkisGtrkieFHIh.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1392469:movie",
+          "label": "Cocktail 2",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/pRmPnUAhHHiDJPfNGLP8ikoc5cx.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1228564:movie",
+          "label": "Boonie Bears: Time Twist",
+          "iconUrl": "https://image.tmdb.org/t/p/w400/3iTRr6nzsFBG6uVWZxUpYlKttw0.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1339713:movie",
+          "label": "Obsession",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/n6EQ4QmlOPIq6zE5cc3IXm9Y4Zl.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1477317:movie",
+          "label": "Your Fault: London",
+          "iconUrl": "https://image.tmdb.org/t/p/w400/nLxu237EJAisFCYKK48hN9Plobx.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "931285:movie",
+          "label": "Mortal Kombat II",
+          "iconUrl": "https://image.tmdb.org/t/p/w400/hwRdDFIhaEmpRgoki805YvyyjZf.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1309587:movie",
+          "label": "Hell in Paradise",
+          "iconUrl": "https://image.tmdb.org/t/p/w400/nCL9LCKau7c0PBbkRMh7fKHjRRI.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1696236:movie",
+          "label": "Mareechika",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/q76fBsZBiHrWqPdRyqszLXJc0SK.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1444466:movie",
+          "label": "Awarapan 2",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/lD3J6zTbWkVtPYuSUuuBwpuKMCO.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1169537:movie",
+          "label": "Batwara 1947",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/n66Q78zJcx5lL5HGRZPUpHxcsG6.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1392469:movie",
+          "label": "Cocktail 2",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/oIQmtByV1LtEQSwM4EpdLTyoSlM.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1291608:movie",
+          "label": "Dhurandhar",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/snBOuXDdhmTvlzMUvP9Em3Pp1u1.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1431068:movie",
+          "label": "Main Vaapas Aaunga",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/wHTNsZxvlfRAndc52hGlbdCUXKS.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1582770:movie",
+          "label": "Dhurandhar: The Revenge",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/ptTwQES14pr5c3aZvJg56YlYgb1.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "718833:movie",
+          "label": "Bokshi",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/iHYu4aCDIjnt6aa5WmKZvmDPJvh.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1239134:movie",
+          "label": "Bhooth Bangla",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/ArIS4vwUxdhm3j7tsTHmffdfU8W.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1122030:movie",
+          "label": "Alpha",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/jlwWG63Yud6q5Ofv4YWaLjzZoFH.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1059007:movie",
+          "label": "Agra",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/biX8D3kSh4HuZzf1r0ynRgaEJte.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1169516:movie",
+          "label": "Welcome To The Jungle",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/1JlfUuvvX5xLP2LIDah4JhWUtTx.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1484913:movie",
+          "label": "Ikka",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/fp5EAKE8nTx402n1fWz55QsuYY9.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1339876:movie",
+          "label": "Mardaani 3",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/dHxLBtHw4InwsVumnthupZYz6NM.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1213898:movie",
+          "label": "Border 2",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/AmrCgmDPEJ6QxllS1rhjYwgO9Wb.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1308553:movie",
+          "label": "Hai Jawani Toh Ishq Hona Hai",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/vmlJvz6qVzYgei2V74GvnmcuQfW.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1109086:movie",
+          "label": "War 2",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/fxxVbjhIOl8ZPS69dH8xeeuxvmh.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1320660:movie",
+          "label": "Pati Patni Aur Woh Do",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/x0RUPvba4JlCCkyyEZGlQFIFVuF.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1241634:movie",
+          "label": "Saiyaara",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/hQBIsi3ZfBYEayMc3GhcEmJVkss.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1446616:movie",
+          "label": "Tu Yaa Main",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/nUPnA0I1MTaZRVCsUQc5DS5JA8W.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        }
+      ]
+    },
+    {
+      "id": "new_arrivals",
+      "title": "New & Popular",
+      "type": "cards",
+      "items": [
+        {
+          "id": "0",
+          "label": "Marvel",
+          "iconUrl": "https://static.vecteezy.com/system/resources/thumbnails/020/336/129/small/marvel-logo-marvel-icon-free-free-vector.jpg",
+          "badge": "NEW",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1",
+          "label": "DC",
+          "iconUrl": "https://mondoshop.com/cdn/shop/collections/dc_comics_temp.png?v=1590018769",
+          "badge": "NEW",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "2",
+          "label": "LIVE",
+          "iconUrl": "https://thumbs.dreamstime.com/b/live-streaming-logo-isolated-black-background-live-streaming-logo-isolated-black-background-simple-vector-icon-163492806.jpg",
+          "badge": "Live",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "3",
+          "label": "Anime",
+          "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOR0oym7hBZbgOQnl_gvOTtkJaVRTvC-DiNJkYC32omk7MtPIQ2G0aV5g&s=10",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        }
+      ]
+    },
+    {
+      "id": "latest",
+      "title": "Latest Movies & Shows",
+      "type": "cards",
+      "items": [
+        {
+          "id": "1653208:movie",
+          "label": "The Great Grand Superhero",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/nkrJSbcehWq4gNOP7eSsM1weRNc.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1167307:movie",
+          "label": "David",
+          "iconUrl": "https://image.tmdb.org/t/p/w400/bESlrLOrsQ9gKzaGQGHXKOyIUtX.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1722860:movie",
+          "label": "tavvai",
+          "iconUrl": "https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/2243/1781792962243-v",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1398050:movie",
+          "label": "Driver's Ed",
+          "iconUrl": "https://image.tmdb.org/t/p/w400/hHbzSzjJnmcq02l2razSScBEVBf.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1081003:movie",
+          "label": "Supergirl",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/niSvU02l2BONH9ivubV6K1a5QiK.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1397385:movie",
+          "label": "Little Brother",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/hIJpXb7Xaje2mebN9ylsS7blQzP.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1410937:movie",
+          "label": "Balan - The Boy",
+          "iconUrl": "https://image.tmdb.org/t/p/w400/boKxdR9tgXfkazf6yWgiDdleBy0.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1377650:movie",
+          "label": "Boonie Bears: Future Reborn",
+          "iconUrl": "https://image.tmdb.org/t/p/w400/2KQMmKP76xJs2aZyTQIJ1Xm2gny.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "454639:movie",
+          "label": "Masters of the Universe",
+          "iconUrl": "https://image.tmdb.org/t/p/w400/3YMd9Ogae4rDKLWuAZFuse9xhc5.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1301421:movie",
+          "label": "The Sheep Detectives",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/mGWOmj2jHFol3kOGNv1EhbSDDE1.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1499984:movie",
+          "label": "Gladiator Underground",
+          "iconUrl": "https://image.tmdb.org/t/p/w400/qLN16AeIjS5P5Kk5B6pBi1Mh1mi.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1228710:movie",
+          "label": "Star Wars The Mandalorian and Grogu",
+          "iconUrl": "https://lh4.googleusercontent.com/proxy/raQQmW3zjnbej_85FCmn0nIMv80BeTqM-YPcmfyW2o2vQzOMgYlY3gngDPKAPVc3B34688smlnZqDrZi-QQ0hMfKnEJm9LgvapVkOGuZJL6Ip8w_pQirJeS9wFdgbh-CXVQll6k",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1191554:movie",
+          "label": "Bubblegum",
+          "iconUrl": "https://catimages.org/images/2026/06/21/Bubblegum-2023.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1597280:movie",
+          "label": "Kenatha Kanom",
+          "iconUrl": "https://image.tmdb.org/t/p/w400/4jFuUoddURp94ZvL7haeunK7fsm.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "312493:tv",
+          "label": "Viral Hit",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/kllmJ1DdzuRszNNwFFu0M7V55Fg.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "936075:movie",
+          "label": "Michael",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/zm0KAbOjlt9eR5y7vDiL2dEOwMl.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1451344:movie",
+          "label": "Husbands in Action",
+          "iconUrl": "https://image.tmdb.org/t/p/w400/ciLsGoyr0B8demTLDbLJmEUOHI5.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "614945:movie",
+          "label": "Voicemails for Isabelle",
+          "iconUrl": "https://image.tmdb.org/t/p/w400/kSsoAbwyw3JMqn1hvW0McGiahCa.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1084244:movie",
+          "label": "Toy Story 5",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/ci5CieYTiOddV55qgdYebD4yOOM.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1446056:movie",
+          "label": "Junior",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/AuJT7uChHqkMmGwbgIK3KZXepUj.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1390300:movie",
+          "label": "Over Your Dead Body",
+          "iconUrl": "https://image.tmdb.org/t/p/w400/b0mJReRxiPv8NwnFDayp3VVJKc2.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "597219:movie",
+          "label": "The Half of It",
+          "iconUrl": "https://imgshare.info/images/2026/06/17/The-Half-of-It-2020.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1242898:movie",
+          "label": "Predator Badlands",
+          "iconUrl": "https://imgshare.info/images/2026/06/17/The-Grudge-2019c2c77a505249bed6.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "393423:movie",
+          "label": "Laal Rang",
+          "iconUrl": "https://image.tmdb.org/t/p/w400/5koaZYQ0s63c7wlX6k75qS9QCpF.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "276609:tv",
+          "label": "Taaza Khabar",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/AnWyFmAGQaUdi1kISvXqy20HHoR.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "90966:tv",
+          "label": "Gullak",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/zv53kjheYrAQAL0rVJXqNj3bhEC.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "284631:tv",
+          "label": "Raakh",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/wO9Sal4zO79lfQju1F9StDCop0Q.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1392469:movie",
+          "label": "Cocktail 2",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/oIQmtByV1LtEQSwM4EpdLTyoSlM.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1291608:movie",
+          "label": "Dhurandhar",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/snBOuXDdhmTvlzMUvP9Em3Pp1u1.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1431068:movie",
+          "label": "Main Vaapas Aaunga",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/wHTNsZxvlfRAndc52hGlbdCUXKS.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1582770:movie",
+          "label": "Dhurandhar: The Revenge",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/ptTwQES14pr5c3aZvJg56YlYgb1.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "718833:movie",
+          "label": "Bokshi",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/iHYu4aCDIjnt6aa5WmKZvmDPJvh.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1239134:movie",
+          "label": "Bhooth Bangla",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/ArIS4vwUxdhm3j7tsTHmffdfU8W.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1122030:movie",
+          "label": "Alpha",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/jlwWG63Yud6q5Ofv4YWaLjzZoFH.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1059007:movie",
+          "label": "Agra",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/biX8D3kSh4HuZzf1r0ynRgaEJte.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1169516:movie",
+          "label": "Welcome To The Jungle",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/1JlfUuvvX5xLP2LIDah4JhWUtTx.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1484913:movie",
+          "label": "Ikka",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/fp5EAKE8nTx402n1fWz55QsuYY9.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1339876:movie",
+          "label": "Mardaani 3",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/dHxLBtHw4InwsVumnthupZYz6NM.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1213898:movie",
+          "label": "Border 2",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/AmrCgmDPEJ6QxllS1rhjYwgO9Wb.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1308553:movie",
+          "label": "Hai Jawani Toh Ishq Hona Hai",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/vmlJvz6qVzYgei2V74GvnmcuQfW.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1109086:movie",
+          "label": "War 2",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/fxxVbjhIOl8ZPS69dH8xeeuxvmh.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1320660:movie",
+          "label": "Pati Patni Aur Woh Do",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/x0RUPvba4JlCCkyyEZGlQFIFVuF.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1241634:movie",
+          "label": "Saiyaara",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/hQBIsi3ZfBYEayMc3GhcEmJVkss.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1446616:movie",
+          "label": "Tu Yaa Main",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/nUPnA0I1MTaZRVCsUQc5DS5JA8W.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1444466:movie",
+          "label": "Awarapan 2",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/lD3J6zTbWkVtPYuSUuuBwpuKMCO.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1169537:movie",
+          "label": "Batwara 1947",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/n66Q78zJcx5lL5HGRZPUpHxcsG6.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1392469:movie",
+          "label": "Cocktail 2",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/oIQmtByV1LtEQSwM4EpdLTyoSlM.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1291608:movie",
+          "label": "Dhurandhar",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/snBOuXDdhmTvlzMUvP9Em3Pp1u1.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1431068:movie",
+          "label": "Main Vaapas Aaunga",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/wHTNsZxvlfRAndc52hGlbdCUXKS.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1582770:movie",
+          "label": "Dhurandhar: The Revenge",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/ptTwQES14pr5c3aZvJg56YlYgb1.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "718833:movie",
+          "label": "Bokshi",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/iHYu4aCDIjnt6aa5WmKZvmDPJvh.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1239134:movie",
+          "label": "Bhooth Bangla",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/ArIS4vwUxdhm3j7tsTHmffdfU8W.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1122030:movie",
+          "label": "Alpha",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/jlwWG63Yud6q5Ofv4YWaLjzZoFH.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1059007:movie",
+          "label": "Agra",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/biX8D3kSh4HuZzf1r0ynRgaEJte.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1169516:movie",
+          "label": "Welcome To The Jungle",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/1JlfUuvvX5xLP2LIDah4JhWUtTx.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1484913:movie",
+          "label": "Ikka",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/fp5EAKE8nTx402n1fWz55QsuYY9.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1339876:movie",
+          "label": "Mardaani 3",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/dHxLBtHw4InwsVumnthupZYz6NM.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1213898:movie",
+          "label": "Border 2",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/AmrCgmDPEJ6QxllS1rhjYwgO9Wb.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1308553:movie",
+          "label": "Hai Jawani Toh Ishq Hona Hai",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/vmlJvz6qVzYgei2V74GvnmcuQfW.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1109086:movie",
+          "label": "War 2",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/fxxVbjhIOl8ZPS69dH8xeeuxvmh.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1320660:movie",
+          "label": "Pati Patni Aur Woh Do",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/x0RUPvba4JlCCkyyEZGlQFIFVuF.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1241634:movie",
+          "label": "Saiyaara",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/hQBIsi3ZfBYEayMc3GhcEmJVkss.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        },
+        {
+          "id": "1446616:movie",
+          "label": "Tu Yaa Main",
+          "iconUrl": "https://image.tmdb.org/t/p/w500/nUPnA0I1MTaZRVCsUQc5DS5JA8W.jpg",
+          "badge": "HD",
+          "placeholderColor": "#1C2B45"
+        }
+      ]
+    }
+  ]
+}

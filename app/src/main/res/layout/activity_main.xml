@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary"
+    android:orientation="vertical">
+
+    <!-- Top Header Bar (Only App Name & Profile/Login) -->
+    <LinearLayout
+        android:id="@+id/topHeaderBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:background="#DD0E1420">
+
+        <!-- Brand Title: KINFLEX -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="KINFLEX"
+                android:textColor="@color/kinflex_red"
+                android:textSize="24sp"
+                android:letterSpacing="0.05" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:background="@color/accent_purple"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:text="TV"
+                android:textColor="@color/text_primary"
+                android:textSize="11sp"
+                android:fontFamily="sans-serif-bold" />
+        </LinearLayout>
+
+        <!-- Right Side: Login / Profile Button -->
+        <LinearLayout
+            android:id="@+id/profileButton"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:background="@drawable/nav_tab_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:id="@+id/profileAvatar"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/avatar_circle"
+                android:gravity="center"
+                android:text="👤"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/profileLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Login / Profile"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rowsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingStart="48dp"
+            android:paddingEnd="48dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="48dp"
+            android:scrollbars="none"
+            android:descendantFocusability="afterDescendants"
+            android:visibility="gone"
+            tools:listitem="@layout/item_home_row" />
+
+        <ProgressBar
+            android:id="@+id/loadingSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/focus_border" />
+
+        <TextView
+            android:id="@+id/errorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="32dp"
+            android:gravity="center"
+            android:textColor="@color/text_secondary"
+            android:textSize="18sp"
+            android:visibility="gone"
+            tools:text="@string/load_error" />
+    </FrameLayout>
+</LinearLayout>

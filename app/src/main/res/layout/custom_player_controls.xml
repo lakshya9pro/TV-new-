@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/exo_controls"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66000000"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Timeline / Progress bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@id/exo_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp" />
+
+        <androidx.media3.ui.DefaultTimeBar
+            android:id="@id/exo_progress"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            app:played_color="@color/focus_border"
+            app:scrubber_color="@color/focus_border"
+            app:unplayed_color="#55FFFFFF" />
+
+        <TextView
+            android:id="@id/exo_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Control Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@id/exo_rew"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/nav_tab_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@android:drawable/ic_media_rew"
+            app:tint="@color/text_primary" />
+
+        <ImageButton
+            android:id="@id/exo_play_pause"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/install_button_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@android:drawable/ic_media_play"
+            app:tint="@color/bg_primary" />
+
+        <ImageButton
+            android:id="@id/exo_ffwd"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/nav_tab_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@android:drawable/ic_media_ff"
+            app:tint="@color/text_primary" />
+    </LinearLayout>
+
+</LinearLayout>

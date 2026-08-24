@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.TVLauncher" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">@color/bg_primary</item>
+        <item name="android:navigationBarColor">@color/bg_primary</item>
+        <item name="android:statusBarColor">@color/bg_primary</item>
+        <item name="android:colorBackground">@color/bg_primary</item>
+        <item name="colorSecondary">@color/accent_purple</item>
+        <item name="colorSecondaryVariant">@color/focus_border</item>
+        <item name="colorOnSecondary">@color/text_primary</item>
+        <!-- Keep focus highlight visible without relying on ripples -->
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="CircleImage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

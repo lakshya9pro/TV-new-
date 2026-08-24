@@ -1,0 +1,62 @@
+{
+  "project": "TVLauncher",
+  "applicationId": "com.batz.tvlauncher",
+  "type": "Android TV app (LEANBACK_LAUNCHER)",
+  "uiApproach": "XML layouts + RecyclerView (no Jetpack Compose, no Leanback widgets)",
+  "minSdk": 21,
+  "targetSdk": 34,
+  "notes": "No third-party logos/screenshots are bundled. All on-screen content (icons, labels, cards, badges) is driven by app/src/main/assets/home_data.json. When an item has no iconUrl, a deterministic letter-avatar placeholder is rendered instead.",
+  "dataSchema": {
+    "file": "app/src/main/assets/home_data.json",
+    "root": {
+      "searchHint": "string, shown in the static search bar row",
+      "rows": "array of Row objects, rendered top to bottom in that order"
+    },
+    "row": {
+      "id": "string, unique",
+      "title": "string or null — row header text; null hides the header",
+      "type": "one of: icons | search | chips | cards",
+      "items": "array of Item objects (empty for type=search)"
+    },
+    "item": {
+      "id": "string, unique",
+      "label": "string, display name",
+      "iconUrl": "string or empty — remote image URL loaded via Glide",
+      "badge": "string or null — small overlay label, e.g. FREE",
+      "placeholderColor": "hex string or null — background color for the letter-avatar fallback"
+    }
+  },
+  "files": [
+    { "path": "settings.gradle", "purpose": "Gradle module + repository config" },
+    { "path": "build.gradle", "purpose": "Root Gradle build script" },
+    { "path": "gradle.properties", "purpose": "AndroidX + Kotlin build flags" },
+    { "path": "app/build.gradle", "purpose": "App module deps: AndroidX, Material, Glide, coroutines" },
+    { "path": "app/proguard-rules.pro", "purpose": "Release build shrink/keep rules" },
+    { "path": "app/src/main/AndroidManifest.xml", "purpose": "Declares LEANBACK_LAUNCHER, TV banner, no-touchscreen-required" },
+    { "path": "app/src/main/assets/home_data.json", "purpose": "All home-screen content — edit this to change the UI without touching code" },
+    { "path": "app/src/main/java/com/batz/tvlauncher/MainActivity.kt", "purpose": "Loads JSON off the main thread, wires the RecyclerView, handles loading/error state" },
+    { "path": "app/src/main/java/com/batz/tvlauncher/model/HomeModels.kt", "purpose": "HomeData / HomeRow / RowItem data classes" },
+    { "path": "app/src/main/java/com/batz/tvlauncher/data/JsonRepository.kt", "purpose": "Parses home_data.json with org.json (swap in a network fetch to go remote)" },
+    { "path": "app/src/main/java/com/batz/tvlauncher/adapter/HomeRowsAdapter.kt", "purpose": "Outer vertical RecyclerView.Adapter — one row per JSON row, shares RecycledViewPools per row type for low-end perf" },
+    { "path": "app/src/main/java/com/batz/tvlauncher/adapter/RowItemAdapters.kt", "purpose": "TopIconsAdapter / ChipsAdapter / CardsAdapter — the three horizontal item styles" },
+    { "path": "app/src/main/java/com/batz/tvlauncher/util/ImageLoader.kt", "purpose": "Glide loader + deterministic letter-avatar fallback, no bundled art" },
+    { "path": "app/src/main/res/layout/activity_main.xml", "purpose": "Root layout: vertical RecyclerView + loading/error views" },
+    { "path": "app/src/main/res/layout/item_home_row.xml", "purpose": "One row: optional header, search-bar variant, or nested horizontal RecyclerView" },
+    { "path": "app/src/main/res/layout/item_top_icon.xml", "purpose": "Circular icon item (top row)" },
+    { "path": "app/src/main/res/layout/item_category_chip.xml", "purpose": "Pill-shaped category chip" },
+    { "path": "app/src/main/res/layout/item_media_card.xml", "purpose": "Landscape media card with label + optional badge" },
+    { "path": "app/src/main/res/drawable/focus_border.xml", "purpose": "D-pad focus highlight for rectangular items" },
+    { "path": "app/src/main/res/drawable/focus_ring_circle.xml", "purpose": "D-pad focus highlight for circular icons" },
+    { "path": "app/src/main/res/drawable/search_bar_bg.xml", "purpose": "Search bar background + focus state" },
+    { "path": "app/src/main/res/drawable/chip_bg.xml", "purpose": "Chip background + focus state" },
+    { "path": "app/src/main/res/drawable/card_bg.xml", "purpose": "Card placeholder background" },
+    { "path": "app/src/main/res/drawable/tv_banner.xml", "purpose": "Generic gradient TV banner (required by leanback launcher, no third-party art)" },
+    { "path": "app/src/main/res/drawable/ic_launcher_background.xml", "purpose": "Adaptive icon background" },
+    { "path": "app/src/main/res/drawable/ic_launcher_foreground.xml", "purpose": "Adaptive icon foreground (generic vector mark)" },
+    { "path": "app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml", "purpose": "Adaptive icon reference" },
+    { "path": "app/src/main/res/values/colors.xml", "purpose": "Dark theme + focus/badge palette" },
+    { "path": "app/src/main/res/values/strings.xml", "purpose": "App strings" },
+    { "path": "app/src/main/res/values/themes.xml", "purpose": "NoActionBar dark theme, CircleImage shape style" },
+    { "path": "README.md", "purpose": "Setup, architecture, JSON schema, low-end TV performance notes" }
+  ]
+}

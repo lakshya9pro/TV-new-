@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_primary">#0E1420</color>
+    <color name="bg_gradient_top">#1B1030</color>
+    <color name="bg_gradient_bottom">#0E1420</color>
+    <color name="surface">#1A2233</color>
+    <color name="surface_light">#26314A</color>
+    <color name="search_bar_bg">#1E3A52</color>
+    <color name="search_bar_border">#4FC3F7</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B7C2D6</color>
+    <color name="focus_border">#4FC3F7</color>
+    <color name="chip_bg">#2A344A</color>
+    <color name="badge_free">#E23E3E</color>
+    <color name="placeholder_1">#5C6BC0</color>
+    <color name="placeholder_2">#26A69A</color>
+    <color name="placeholder_3">#7E57C2</color>
+    <color name="placeholder_4">#EF6C00</color>
+    <color name="placeholder_5">#00897B</color>
+    <color name="placeholder_6">#C2185B</color>
+    <color name="accent_purple">#7E57C2</color>
+    <color name="kinflex_red">#E50914</color>
+</resources>
