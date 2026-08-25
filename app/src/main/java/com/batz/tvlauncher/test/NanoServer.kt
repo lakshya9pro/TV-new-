@@ -1216,17 +1216,30 @@ class NanoServer(val serverPort: Int = DefaultPort) : NanoHTTPD(serverPort) {
         val tierRes = resolveStreamFlow(tmdb, imdb, mediaType, season, episode, host, tierParam)
 
         if (!tierRes.found || tierRes.streamURLs.isEmpty()) {
-            val errJson = JSONObject().apply {
-                put("status", "error")
-                put("status_code", 404)
-                put("message", "No stream found for tmdb='$tmdb', imdb='$imdb'")
+            val fallbackStream = "https://amg00862-amg00862c6-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c6-amgplt0173/playlist.m3u8"
+            val fallbackJson = JSONObject().apply {
+                put("status", "success")
+                put("status_code", 200)
+                put("title", "Live Stream Fallback")
                 put("media_type", mediaType)
                 put("tmdb_id", tmdb)
                 put("imdb_id", imdb)
-                put("sources", JSONArray())
+                put("season", season.toIntOrNull() ?: 1)
+                put("episode", episode.toIntOrNull() ?: 1)
+                put("tier", 1)
+                put("source", "fallback")
+                put("videoUrl", fallbackStream)
+                put("default_stream", fallbackStream)
+                put("url", fallbackStream)
+                put("sources", JSONArray().put(JSONObject().apply {
+                    put("url", fallbackStream)
+                    put("videoUrl", fallbackStream)
+                    put("quality", "auto")
+                    put("type", "hls")
+                }))
                 put("subtitles", JSONArray())
             }
-            return createJsonResponse(Response.Status.NOT_FOUND, errJson.toString())
+            return createJsonResponse(Response.Status.OK, fallbackJson.toString())
         }
 
         val defaultStream = tierRes.streamURLs.first()

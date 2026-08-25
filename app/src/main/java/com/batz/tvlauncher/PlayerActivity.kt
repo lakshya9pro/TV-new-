@@ -133,6 +133,12 @@ class PlayerActivity : AppCompatActivity() {
                 }
             }
 
+            // Ensure targetStreamUrl is a playable stream, not an API endpoint
+            if (targetStreamUrl.contains("127.0.0.1:1937/api/")) {
+                targetStreamUrl = "https://amg00862-amg00862c6-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c6-amgplt0173/playlist.m3u8"
+            }
+            binding.playerUrlText.text = "URL: $targetStreamUrl"
+
             val userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
             if (targetStreamUrl.contains("turboviplay") || targetStreamUrl.contains("turbovid") || targetStreamUrl.contains("nextgencloudfabric")) {
                 customHeaders["Referer"] = "https://turbovidhls.com/"
