@@ -83,40 +83,62 @@ class PlayerActivity : AppCompatActivity() {
 
     private fun initializePlayer() {
         try {
-            Log.d(TAG, "Initializing ExoPlayer for URL: $mediaUrl")
-
-            val exoPlayer = ExoPlayer.Builder(this).build().apply {
-                val mediaItem = MediaItem.fromUri(Uri.parse(mediaUrl))
-                setMediaItem(mediaItem)
-                prepare()
-                playWhenReady = true
-                
-                addListener(object : Player.Listener {
-                    override fun onPlaybackStateChanged(playbackState: Int) {
-                        val stateString = when (playbackState) {
-                            Player.STATE_BUFFERING -> "STATE_BUFFERING"
-                            Player.STATE_READY -> "STATE_READY"
-                            Player.STATE_ENDED -> "STATE_ENDED"
-                            Player.STATE_IDLE -> "STATE_IDLE"
-                            else -> "UNKNOWN"
-                        }
-                        Log.d(TAG, "Playback State Changed: $stateString | URL: $mediaUrl")
-                    }
-
-                    override fun onIsPlayingChanged(isPlaying: Boolean) {
-                        Log.d(TAG, "Is Playing: $isPlaying | Title: $mediaTitle")
-                    }
-
-                    override fun onPlayerError(error: PlaybackException) {
-                        Log.e(TAG, "Playback Error for URL: $mediaUrl | Error: ${error.message}", error)
-                        Toast.makeText(
-                            this@PlayerActivity,
-                            "Playback Error: ${error.localizedMessage}",
-                            Toast.LENGTH_LONG
-                        ).show()
-                    }
-                })
+            val userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            val headers = mutableMapOf<String, String>()
+            if (mediaUrl.contains("turboviplay") || mediaUrl.contains("turbovid") || mediaUrl.contains("nextgencloudfabric")) {
+                headers["Referer"] = "https://turbovidhls.com/"
+                headers["Origin"] = "https://turbovidhls.com"
+            } else if (mediaUrl.contains("heistotron") || mediaUrl.contains("mapple")) {
+                headers["Referer"] = "https://mapple.rip/"
+                headers["Origin"] = "https://mapple.rip"
             }
+
+            val httpDataSourceFactory = androidx.media3.datasource.DefaultHttpDataSource.Factory()
+                .setAllowCrossProtocolRedirects(true)
+                .setConnectTimeoutMs(15_000)
+                .setReadTimeoutMs(30_000)
+                .setUserAgent(userAgent)
+                .setDefaultRequestProperties(headers)
+
+            val dataSourceFactory = androidx.media3.datasource.DefaultDataSource.Factory(this, httpDataSourceFactory)
+            val mediaSourceFactory = androidx.media3.exoplayer.source.DefaultMediaSourceFactory(dataSourceFactory)
+
+            Log.d(TAG, "Initializing ExoPlayer for URL: $mediaUrl with headers: $headers")
+
+            val exoPlayer = ExoPlayer.Builder(this)
+                .setMediaSourceFactory(mediaSourceFactory)
+                .build().apply {
+                    val mediaItem = MediaItem.fromUri(Uri.parse(mediaUrl))
+                    setMediaItem(mediaItem)
+                    prepare()
+                    playWhenReady = true
+                    
+                    addListener(object : Player.Listener {
+                        override fun onPlaybackStateChanged(playbackState: Int) {
+                            val stateString = when (playbackState) {
+                                Player.STATE_BUFFERING -> "STATE_BUFFERING"
+                                Player.STATE_READY -> "STATE_READY"
+                                Player.STATE_ENDED -> "STATE_ENDED"
+                                Player.STATE_IDLE -> "STATE_IDLE"
+                                else -> "UNKNOWN"
+                            }
+                            Log.d(TAG, "Playback State Changed: $stateString | URL: $mediaUrl")
+                        }
+
+                        override fun onIsPlayingChanged(isPlaying: Boolean) {
+                            Log.d(TAG, "Is Playing: $isPlaying | Title: $mediaTitle")
+                        }
+
+                        override fun onPlayerError(error: PlaybackException) {
+                            Log.e(TAG, "Playback Error for URL: $mediaUrl | Error: ${error.message}", error)
+                            Toast.makeText(
+                                this@PlayerActivity,
+                                "Playback Error: ${error.localizedMessage}",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
+                    })
+                }
 
             player = exoPlayer
             binding.playerView.player = exoPlayer
