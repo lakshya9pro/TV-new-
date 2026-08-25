@@ -9,7 +9,7 @@ on:
 
 jobs:
   build-apk:
-    name: Build Debug & Release APKs
+    name: Build Debug APK
     runs-on: ubuntu-latest
 
     steps:
@@ -21,34 +21,6 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-
-      - name: Setup Android NDK
-        run: |
-          if [ -n "$ANDROID_NDK_LATEST_HOME" ]; then
-            echo "ANDROID_NDK_ROOT=$ANDROID_NDK_LATEST_HOME" >> $GITHUB_ENV
-          elif [ -d "$ANDROID_SDK_ROOT/ndk" ]; then
-            NDK_DIR=$(find $ANDROID_SDK_ROOT/ndk -mindepth 1 -maxdepth 1 | tail -n 1)
-            echo "ANDROID_NDK_ROOT=$NDK_DIR" >> $GITHUB_ENV
-          else
-            echo "ANDROID_NDK_ROOT=$ANDROID_SDK_ROOT/ndk-bundle" >> $GITHUB_ENV
-          fi
-
-      - name: Compile Native C++ Proxy (.so)
-        run: |
-          mkdir -p app/src/main/jniLibs/arm64-v8a
-          mkdir -p app/src/main/jniLibs/armeabi-v7a
-          
-          # Compile arm64-v8a shared library
-          $ANDROID_NDK_ROOT/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang++ \
-            -shared -fPIC -std=c++17 -O3 \
-            app/src/main/cpp/native_proxy.cpp \
-            -o app/src/main/jniLibs/arm64-v8a/libnative_proxy.so -llog
-
-          # Compile armeabi-v7a shared library
-          $ANDROID_NDK_ROOT/toolchains/llvm/prebuilt/linux-x86_64/bin/armv7a-linux-androideabi21-clang++ \
-            -shared -fPIC -std=c++17 -O3 \
-            app/src/main/cpp/native_proxy.cpp \
-            -o app/src/main/jniLibs/armeabi-v7a/libnative_proxy.so -llog
 
       - name: Grant Execute Permission for Gradle Wrapper
         run: chmod +x gradlew || true

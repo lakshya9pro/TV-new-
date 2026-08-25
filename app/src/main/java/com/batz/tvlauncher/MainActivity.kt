@@ -15,7 +15,6 @@ import com.batz.tvlauncher.adapter.HomeRowsAdapter
 import com.batz.tvlauncher.data.JsonRepository
 import com.batz.tvlauncher.databinding.ActivityMainBinding
 import com.batz.tvlauncher.model.RowItem
-import com.batz.tvlauncher.proxy.ProxyHandler
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
@@ -26,9 +25,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        // Silently start C++ native proxy server in background (No UI changes)
-        ProxyHandler.start()
 
         setupHeaderNavigation()
         loadHomeData()

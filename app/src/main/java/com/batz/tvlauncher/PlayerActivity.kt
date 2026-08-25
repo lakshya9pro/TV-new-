@@ -83,25 +83,10 @@ class PlayerActivity : AppCompatActivity() {
 
     private fun initializePlayer() {
         try {
-            val playUrl = if (com.batz.tvlauncher.proxy.ProxyHandler.isNativeLoaded && (mediaUrl.contains(".m3u8") || isLiveStream)) {
-                if (!com.batz.tvlauncher.proxy.ProxyHandler.isRunning()) {
-                    com.batz.tvlauncher.proxy.ProxyHandler.start()
-                }
-                if (com.batz.tvlauncher.proxy.ProxyHandler.isRunning()) {
-                    val proxied = com.batz.tvlauncher.proxy.ProxyHandler.getProxyUrl(mediaUrl)
-                    Log.i(TAG, "Routing stream through Native C++ Proxy: $proxied")
-                    proxied
-                } else {
-                    mediaUrl
-                }
-            } else {
-                mediaUrl
-            }
-
-            Log.d(TAG, "Initializing ExoPlayer for URL: $playUrl")
+            Log.d(TAG, "Initializing ExoPlayer for URL: $mediaUrl")
 
             val exoPlayer = ExoPlayer.Builder(this).build().apply {
-                val mediaItem = MediaItem.fromUri(Uri.parse(playUrl))
+                val mediaItem = MediaItem.fromUri(Uri.parse(mediaUrl))
                 setMediaItem(mediaItem)
                 prepare()
                 playWhenReady = true
