@@ -99,9 +99,6 @@ data class SubtitleTrack(
 // ─── Crypto & Helpers ────────────────────────────────────────────────────────
 
 fun md5Hex(text: String): String {
-    if (NativeEngine.isLoaded) {
-        return NativeEngine.md5Hex(text)
-    }
     val digest = MessageDigest.getInstance("MD5").digest(text.toByteArray(Charsets.UTF_8))
     return digest.joinToString("") { "%02x".format(it) }
 }
@@ -126,17 +123,11 @@ fun des3Decrypt(encryptedBase64: String): String {
 }
 
 fun generateSign(curTime: String): String {
-    if (NativeEngine.isLoaded) {
-        return NativeEngine.generateSign(curTime, deviceId)
-    }
     val secret = des3Decrypt(SECRET_KEY_ENCRYPTED)
     return md5Hex(secret + deviceId + curTime).uppercase()
 }
 
 fun generateP2pToken(vodId: String, timestamp: String): String {
-    if (NativeEngine.isLoaded) {
-        return NativeEngine.generateP2pToken(vodId, timestamp, deviceId)
-    }
     return md5Hex(P2P_SALT + deviceId + vodId + timestamp).uppercase()
 }
 
@@ -382,9 +373,6 @@ fun parseTmdbMap(data: JSONObject, mediaType: String): TmdbInfo {
 fun scoreCandidate(item: JSONObject, title: String, year: String, season: Int?): Int {
     val vodName = item.optString("vod_name")
     val vodYear = item.optString("vod_year")
-    if (NativeEngine.isLoaded) {
-        return NativeEngine.scoreCandidate(vodName, vodYear, title, year, season ?: 0)
-    }
 
     var score = 0
     val normVod = vodName.trim().lowercase()
@@ -573,11 +561,6 @@ fun scrapeTurbovidHLS(playCode: String): String {
 
     val html = httpGet("https://turbovidhls.com/t/$code")
     if (html.isEmpty()) return ""
-
-    if (NativeEngine.isLoaded) {
-        val nativeRes = NativeEngine.scrapeTurbovidHLS(html)
-        if (nativeRes.isNotEmpty()) return nativeRes
-    }
 
     val unescaped = html.replace("""\/""", "/")
     val regex = Regex("""https?://[^\s"'<>]+\.m3u8[^\s"'<>]*""")
@@ -787,11 +770,6 @@ private class VideasyState(
 )
 
 fun decryptVideasyPayload(encryptedB64: String, seedStr: String, mediaIdNum: Int): String? {
-    if (NativeEngine.isLoaded) {
-        val nativeDec = NativeEngine.decryptVideasyPayload(encryptedB64, seedStr, mediaIdNum)
-        if (nativeDec.isNotEmpty()) return nativeDec
-    }
-
     val cipherBytes = decodeBase64UrlBytes(encryptedB64) ?: return null
 
     var t: Long = 2166136261L
