@@ -86,7 +86,7 @@ class PlayerActivity : AppCompatActivity() {
     }
 
     private fun initializePlayer() {
-        androidx.lifecycle.lifecycleScope.launch {
+        kotlinx.coroutines.CoroutineScope(Dispatchers.Main).launch {
             var targetStreamUrl = mediaUrl
             val customHeaders = mutableMapOf<String, String>()
 
