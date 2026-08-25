@@ -50,7 +50,8 @@ class SeasonsAdapter(
 }
 
 class ScreenshotsAdapter(
-    private val items: List<Screenshot>
+    private val items: List<Screenshot>,
+    private val onItemClick: ((Screenshot) -> Unit)? = null
 ) : RecyclerView.Adapter<ScreenshotsAdapter.VH>() {
 
     inner class VH(view: View) : RecyclerView.ViewHolder(view) {
@@ -75,6 +76,10 @@ class ScreenshotsAdapter(
         } else {
             holder.caption.visibility = View.VISIBLE
             holder.caption.text = item.caption
+        }
+
+        holder.itemView.setOnClickListener {
+            onItemClick?.invoke(item)
         }
     }
 

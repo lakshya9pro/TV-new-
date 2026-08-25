@@ -88,7 +88,13 @@ class DetailActivity : AppCompatActivity() {
 
         binding.installButton.setOnClickListener {
             val liveM3u8Fallback = "https://amg00862-amg00862c6-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c6-amgplt0173/playlist.m3u8"
-            val targetStream = detail.streamUrl ?: liveM3u8Fallback
+            val targetStream = if (!detail.streamUrl.isNullOrBlank()) {
+                detail.streamUrl
+            } else if (detail.id.isNotBlank() && !detail.id.startsWith("local_")) {
+                "http://127.0.0.1:1937/api/stream?url=${detail.id}"
+            } else {
+                liveM3u8Fallback
+            }
             PlayerActivity.start(this, mediaUrl = targetStream, title = detail.title, isLive = detail.id.startsWith("m3u") || detail.contentRating == "LIVE")
         }
 
@@ -99,14 +105,14 @@ class DetailActivity : AppCompatActivity() {
                 LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
             val initialSeason = detail.seasons[0]
-            updateEpisodesList(initialSeason.name, initialSeason.episodes.ifEmpty { detail.screenshots })
+            updateEpisodesList(detail.title, initialSeason.name, initialSeason.episodes.ifEmpty { detail.screenshots })
 
             binding.seasonRecyclerView.adapter = SeasonsAdapter(detail.seasons, selectedPosition = 0) { season, _ ->
-                updateEpisodesList(season.name, season.episodes.ifEmpty { detail.screenshots })
+                updateEpisodesList(detail.title, season.name, season.episodes.ifEmpty { detail.screenshots })
             }
         } else {
             binding.seasonSectionContainer.visibility = View.GONE
-            updateEpisodesList("Screenshots", detail.screenshots)
+            updateEpisodesList(detail.title, "Screenshots", detail.screenshots)
         }
 
         // Cast Section
@@ -142,7 +148,7 @@ class DetailActivity : AppCompatActivity() {
         }
     }
 
-    private fun updateEpisodesList(titlePrefix: String, screenshots: List<com.batz.tvlauncher.model.Screenshot>) {
+    private fun updateEpisodesList(mainTitle: String, titlePrefix: String, screenshots: List<com.batz.tvlauncher.model.Screenshot>) {
         if (screenshots.isNotEmpty()) {
             binding.screenshotsTitle.visibility = View.VISIBLE
             binding.screenshotsRecyclerView.visibility = View.VISIBLE
@@ -155,7 +161,11 @@ class DetailActivity : AppCompatActivity() {
             }
             binding.screenshotsRecyclerView.layoutManager =
                 LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-            binding.screenshotsRecyclerView.adapter = ScreenshotsAdapter(screenshots)
+            binding.screenshotsRecyclerView.adapter = ScreenshotsAdapter(screenshots) { episodeItem ->
+                val epTitle = if (!episodeItem.caption.isNullOrBlank()) "$mainTitle - ${episodeItem.caption}" else mainTitle
+                val epStream = "https://amg00862-amg00862c6-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c6-amgplt0173/playlist.m3u8"
+                PlayerActivity.start(this, mediaUrl = epStream, title = epTitle)
+            }
         } else {
             binding.screenshotsTitle.visibility = View.GONE
             binding.screenshotsRecyclerView.visibility = View.GONE
