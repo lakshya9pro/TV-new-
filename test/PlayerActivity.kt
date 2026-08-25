@@ -1,4 +1,4 @@
-package com.batz.tvlauncher
+package com.example.mybasic.activity
 
 import android.annotation.SuppressLint
 import android.app.Dialog
@@ -24,6 +24,7 @@ import androidx.media3.datasource.DefaultHttpDataSource
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.exoplayer.DefaultLoadControl
 import androidx.media3.exoplayer.hls.HlsMediaSource
+import androidx.media3.exoplayer.dash.DashMediaSource
 import androidx.media3.exoplayer.source.MediaSource
 import androidx.media3.exoplayer.source.MergingMediaSource
 import androidx.media3.exoplayer.source.ProgressiveMediaSource
@@ -35,9 +36,9 @@ import androidx.media3.ui.AspectRatioFrameLayout
 import androidx.media3.ui.PlayerView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.batz.tvlauncher.adapter.EpisodeAdapter
-import com.batz.tvlauncher.data.ApiClient
-import com.batz.tvlauncher.model.*
+import com.example.mybasic.activity.adapter.EpisodeAdapter
+import com.example.mybasic.activity.api.ApiClient
+import com.example.mybasic.activity.model.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
