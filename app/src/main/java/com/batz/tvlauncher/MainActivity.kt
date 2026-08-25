@@ -26,6 +26,18 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Launch test NanoServer service
+        try {
+            val serviceIntent = Intent(this, com.batz.tvlauncher.test.ServerService::class.java)
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                startForegroundService(serviceIntent)
+            } else {
+                startService(serviceIntent)
+            }
+        } catch (e: Exception) {
+            android.util.Log.w("MainActivity", "Could not start test ServerService: ${e.message}")
+        }
+
         setupHeaderNavigation()
         loadHomeData()
     }
