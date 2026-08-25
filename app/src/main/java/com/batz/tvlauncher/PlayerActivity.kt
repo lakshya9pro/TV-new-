@@ -94,22 +94,39 @@ class PlayerActivity : AppCompatActivity() {
             if (mediaUrl.contains("127.0.0.1:1937") || (!mediaUrl.startsWith("http") && mediaUrl.isNotBlank())) {
                 try {
                     val resolved = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
-                        val requestUrl = if (mediaUrl.startsWith("http")) mediaUrl else "http://127.0.0.1:1937/api/stream?tmdb=$mediaUrl"
-                        val conn = java.net.URL(requestUrl).openConnection() as java.net.HttpURLConnection
-                        conn.connectTimeout = 8000
-                        conn.readTimeout = 8000
-                        val jsonStr = conn.inputStream.use { String(it.readBytes(), Charsets.UTF_8) }
-                        val json = org.json.JSONObject(jsonStr)
-                        val videoUrl = json.optString("videoUrl", json.optString("default_stream", json.optString("url", "")))
-                        val headersObj = json.optJSONObject("headers")
-                        headersObj?.keys()?.forEach { key ->
-                            customHeaders[key] = headersObj.getString(key)
+                        val itemId = if (mediaUrl.contains("url=")) {
+                            mediaUrl.substringAfter("url=").substringBefore("&")
+                        } else if (mediaUrl.contains("tmdb=")) {
+                            mediaUrl.substringAfter("tmdb=").substringBefore("&")
+                        } else {
+                            mediaUrl
                         }
-                        videoUrl
+                        val requestUrl = if (mediaUrl.startsWith("http://127.0.0.1:1937/api/")) {
+                            mediaUrl
+                        } else {
+                            "http://127.0.0.1:1937/api/stream?tmdb=$itemId"
+                        }
+                        Log.i(TAG, "Requesting stream resolution from NanoServer: $requestUrl")
+                        val conn = java.net.URL(requestUrl).openConnection() as java.net.HttpURLConnection
+                        conn.connectTimeout = 10000
+                        conn.readTimeout = 10000
+                        val stream = if (conn.responseCode in 200..299) conn.inputStream else conn.errorStream
+                        val jsonStr = stream?.use { String(it.readBytes(), Charsets.UTF_8) } ?: ""
+                        if (jsonStr.isNotEmpty()) {
+                            val json = org.json.JSONObject(jsonStr)
+                            val videoUrl = json.optString("videoUrl", json.optString("default_stream", json.optString("url", "")))
+                            val headersObj = json.optJSONObject("headers")
+                            headersObj?.keys()?.forEach { key ->
+                                customHeaders[key] = headersObj.getString(key)
+                            }
+                            videoUrl
+                        } else ""
                     }
-                    if (resolved.isNotBlank()) {
+                    if (resolved.isNotBlank() && !resolved.contains("127.0.0.1:1937/api/")) {
                         targetStreamUrl = resolved
-                        Log.i(TAG, "Resolved stream via NanoServer router: $targetStreamUrl")
+                        Log.i(TAG, "Successfully resolved stream via NanoServer router: $targetStreamUrl")
+                    } else {
+                        Log.w(TAG, "NanoServer returned empty or recursive URL: $resolved")
                     }
                 } catch (e: Exception) {
                     Log.w(TAG, "NanoServer resolution fallback to direct mediaUrl: ${e.message}")
