@@ -87,9 +87,17 @@ class PlayerActivity : AppCompatActivity() {
             })
         }
 
-        fun start(context: Context, videoUrl: String, title: String? = null) {
+        fun start(
+            context: Context,
+            videoUrl: String = "",
+            title: String? = null,
+            mediaUrl: String = "",
+            isLive: Boolean = false
+        ) {
+            val target = if (videoUrl.isNotBlank()) videoUrl else mediaUrl
             context.startActivity(Intent(context, PlayerActivity::class.java).apply {
-                putExtra(EXTRA_VIDEO_URL, videoUrl)
+                putExtra(EXTRA_VIDEO_URL, target)
+                putExtra(EXTRA_MEDIA_ID, target)
                 putExtra(EXTRA_TITLE, title)
             })
         }
@@ -169,7 +177,7 @@ class PlayerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_player)
 
         // Parse intent extras
-        mediaId = intent.getStringExtra(EXTRA_MEDIA_ID) ?: ""
+        mediaId = intent.getStringExtra(EXTRA_MEDIA_ID)?.ifBlank { null } ?: intent.getStringExtra(EXTRA_VIDEO_URL) ?: intent.getStringExtra("extra_media_url") ?: ""
         tmdbId = intent.getIntExtra(EXTRA_TMDB_ID, 0)
         mediaType = intent.getStringExtra(EXTRA_MEDIA_TYPE) ?: "tv"
         currentSeason = intent.getIntExtra(EXTRA_SEASON, 1)
