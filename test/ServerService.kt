@@ -14,7 +14,7 @@ class ServerService : Service() {
 
     companion object {
         private const val TAG = "ServerService"
-        const val PORT = 1657
+        const val PORT = 1937
         const val CHANNEL_ID = "nano_server_channel"
         const val NOTIF_ID = 1001
         var isRunning = false

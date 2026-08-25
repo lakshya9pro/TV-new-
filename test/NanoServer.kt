@@ -23,7 +23,7 @@ import javax.crypto.spec.SecretKeySpec
 
 private const val TAG = "NanoServer"
 
-const val DefaultPort = 1657
+const val DefaultPort = 1937
 const val DefaultReferer = "https://nextgencloudfabric.com/"
 const val DefaultOrigin = "https://nextgencloudfabric.com"
 const val UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
