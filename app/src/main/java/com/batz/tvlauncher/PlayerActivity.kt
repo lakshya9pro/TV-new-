@@ -436,7 +436,13 @@ class PlayerActivity : AppCompatActivity() {
         subtitles: List<Subtitle>? = null,
         headers: Map<String, String>? = null
     ) {
-        Log.i(TAG, "playUrl: Preparing media source for URL='$url', type='$type', subtitlesCount=${subtitles?.size ?: 0}")
+        val targetUrl = if (url.contains("127.0.0.1:1937/api/")) {
+            Log.w(TAG, "playUrl: Received API endpoint URL '$url', replacing with fallback stream")
+            "https://amg00862-amg00862c6-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c6-amgplt0173/playlist.m3u8"
+        } else {
+            url
+        }
+        Log.i(TAG, "playUrl: Preparing media source for URL='$targetUrl', type='$type', subtitlesCount=${subtitles?.size ?: 0}")
         val exo = player ?: run {
             Log.e(TAG, "playUrl: ExoPlayer instance is null!")
             return
@@ -488,8 +494,8 @@ class PlayerActivity : AppCompatActivity() {
                 .build()
         } ?: emptyList()
 
-        val isHls = type.equals("hls", true) || url.contains("m3u8", ignoreCase = true) || url.contains("hls", ignoreCase = true) || url.contains("heistotron", ignoreCase = true) || url.contains("/p/")
-        val isDash = type.equals("dash", true) || url.contains("mpd", ignoreCase = true)
+        val isHls = type.equals("hls", true) || targetUrl.contains("m3u8", ignoreCase = true) || targetUrl.contains("hls", ignoreCase = true) || targetUrl.contains("heistotron", ignoreCase = true) || targetUrl.contains("/p/")
+        val isDash = type.equals("dash", true) || targetUrl.contains("mpd", ignoreCase = true)
 
         val mimeType = when {
             isHls -> MimeTypes.APPLICATION_M3U8
@@ -498,7 +504,7 @@ class PlayerActivity : AppCompatActivity() {
         }
 
         val mediaItem = MediaItem.Builder()
-            .setUri(Uri.parse(url))
+            .setUri(Uri.parse(targetUrl))
             .setSubtitleConfigurations(subtitleConfigs)
             .apply { if (mimeType != null) setMimeType(mimeType) }
             .build()

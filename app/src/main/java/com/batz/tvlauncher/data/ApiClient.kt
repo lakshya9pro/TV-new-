@@ -20,11 +20,39 @@ object ApiClient {
 
     class MediaApi {
         fun getMovieMedia(mediaId: String, selectedTier: Int? = null): ApiResponse<MediaResponse> {
-            return fetchMediaJson("http://127.0.0.1:1937/api/media/movie/$mediaId${if (selectedTier != null) "?tier=$selectedTier" else ""}")
+            val cleanId = extractCleanId(mediaId)
+            val requestUrl = if (mediaId.startsWith("http://127.0.0.1:1937/api/stream")) {
+                mediaId
+            } else if (mediaId.startsWith("http")) {
+                mediaId
+            } else {
+                "http://127.0.0.1:1937/api/media/movie/$cleanId${if (selectedTier != null) "?tier=$selectedTier" else ""}"
+            }
+            return fetchMediaJson(requestUrl)
         }
 
         fun getTvMedia(mediaId: String, season: Int, episode: Int, selectedTier: Int? = null): ApiResponse<MediaResponse> {
-            return fetchMediaJson("http://127.0.0.1:1937/api/media/tv/$mediaId/$season/$episode${if (selectedTier != null) "?tier=$selectedTier" else ""}")
+            val cleanId = extractCleanId(mediaId)
+            val requestUrl = if (mediaId.startsWith("http://127.0.0.1:1937/api/stream")) {
+                mediaId
+            } else if (mediaId.startsWith("http")) {
+                mediaId
+            } else {
+                "http://127.0.0.1:1937/api/media/tv/$cleanId/$season/$episode${if (selectedTier != null) "?tier=$selectedTier" else ""}"
+            }
+            return fetchMediaJson(requestUrl)
+        }
+
+        private fun extractCleanId(idOrUrl: String): String {
+            return if (idOrUrl.contains("url=")) {
+                idOrUrl.substringAfter("url=").substringBefore("&")
+            } else if (idOrUrl.contains("tmdb=")) {
+                idOrUrl.substringAfter("tmdb=").substringBefore("&")
+            } else if (idOrUrl.startsWith("http")) {
+                idOrUrl.substringAfterLast("/").substringBefore("?").substringBefore("#")
+            } else {
+                idOrUrl
+            }
         }
 
         private fun fetchMediaJson(urlStr: String): ApiResponse<MediaResponse> {
